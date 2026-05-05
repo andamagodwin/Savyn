@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Savyn</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Groups -->
+    <string name="groups">Groups</string>
+    <string name="create_group">Create Group</string>
+    <string name="add_group">Add group</string>
+    <string name="delete_group">Delete Group</string>
+    <string name="delete_group_confirm">Delete \"%1$s\" and all its data? This cannot be undone.</string>
+    <string name="group_name">Group Name</string>
+    <string name="description">Description</string>
+    <string name="weekly_target_amount">Weekly Target Amount</string>
+    <string name="no_groups_yet">No savings groups yet.\nTap + to create one.</string>
+    <string name="group_detail">Group Details</string>
+    <string name="total_saved">Total Saved</string>
+
+    <!-- Members -->
+    <string name="members">Members</string>
+    <string name="add_member">Add Member</string>
+    <string name="remove_member">Remove Member</string>
+    <string name="remove_member_confirm">Remove \"%1$s\" from this group? Their contribution data will also be deleted.</string>
+    <string name="member_name">Member Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="phone_optional">Phone (optional)</string>
+    <string name="no_members_yet">No members yet.\nTap the button below to add members.</string>
+
+    <!-- Contributions -->
+    <string name="contributions">Contribute</string>
+    <string name="record_payment">Record Payment</string>
+    <string name="amount">Amount</string>
+    <string name="note_optional">Note (optional)</string>
+    <string name="pay">Pay</string>
+    <string name="record">Record</string>
+    <string name="member_contributions">Member Contributions</string>
+    <string name="previous_week">Previous week</string>
+    <string name="next_week">Next week</string>
+    <string name="payment_status">Payment status</string>
+    <string name="add_members_first">Add members to the group first to record contributions.</string>
+
+    <!-- Analytics -->
+    <string name="analytics">Analytics</string>
+    <string name="avg_per_member">Avg/Member</string>
+    <string name="weekly_savings_trend">Weekly Savings Trend</string>
+    <string name="contributions_by_member">Contributions by Member</string>
+    <string name="weekly_participation">Weekly Participation Rate</string>
+    <string name="no_data_yet">No data yet</string>
+
+    <!-- Goals -->
+    <string name="goals">Goals</string>
+    <string name="add_goal">Add Goal</string>
+    <string name="delete_goal">Delete Goal</string>
+    <string name="delete_goal_confirm">Delete the goal \"%1$s\"?</string>
+    <string name="goal_name">Goal Name</string>
+    <string name="target_amount">Target Amount</string>
+    <string name="set_deadline_optional">Set Deadline (optional)</string>
+    <string name="select_deadline">Select Deadline</string>
+    <string name="no_goals_yet">No savings goals yet.\nTap + to set a goal.</string>
+
+    <!-- Common -->
+    <string name="create">Create</string>
+    <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+</resources>
