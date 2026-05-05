@@ -24,8 +24,24 @@
         <!-- Bold Headers and Card Styles -->
         <item name="textAppearanceTitleMedium">@style/TextAppearance.Savyn.BoldTitleMedium</item>
         <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Savyn.BoldHeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.Savyn.BoldHeadlineSmall</item>
         <item name="materialCardViewStyle">@style/Widget.Savyn.CardView</item>
         <item name="textInputStyle">@style/Widget.Savyn.TextInputLayout</item>
+
+        <!-- Bold Toolbar Text -->
+        <item name="toolbarStyle">@style/Widget.Savyn.Toolbar</item>
+
+        <!-- Branded Button Styles -->
+        <item name="materialButtonStyle">@style/Widget.Savyn.Button</item>
+    </style>
+
+    <style name="Widget.Savyn.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.Savyn.ToolbarTitle</item>
+    </style>
+
+    <style name="TextAppearance.Savyn.ToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/poppins</item>
     </style>
 
     <style name="ShapeAppearance.Savyn.Input" parent="ShapeAppearance.Material3.SmallComponent">
@@ -42,6 +58,10 @@
     </style>
 
     <style name="TextAppearance.Savyn.BoldHeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Savyn.BoldHeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -69,13 +89,32 @@
         <item name="cardBackgroundColor">?attr/colorSurfaceVariant</item>
     </style>
 
+    <style name="Widget.Savyn.Button" parent="Widget.Material3.Button">
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <style name="Widget.Savyn.Button.Rounded" parent="Widget.Material3.Button">
+        <item name="cornerRadius">24dp</item>
+    </style>
+
+    <style name="Widget.Savyn.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="cornerRadius">20dp</item>
+    </style>
+
     <style name="Theme.Savyn" parent="Base.Theme.Savyn">
         <item name="floatingActionButtonStyle">@style/Widget.Savyn.FAB</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.Savyn.BottomSheet</item>
     </style>
 
     <style name="Widget.Savyn.FAB" parent="Widget.Material3.FloatingActionButton.Primary">
         <item name="backgroundColor">?attr/colorPrimary</item>
         <item name="tint">?attr/colorOnPrimary</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Savyn.FAB</item>
+    </style>
+
+    <style name="ShapeAppearance.Savyn.FAB" parent="ShapeAppearance.Material3.Corner.Full">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
     </style>
 
     <style name="ShapeAppearance.Savyn.BottomSheet" parent="ShapeAppearance.Material3.LargeComponent">
@@ -89,5 +128,18 @@
     <style name="Widget.Savyn.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Savyn.BottomSheet</item>
         <item name="backgroundTint">@color/md_theme_light_background</item>
+    </style>
+
+    <style name="Theme.Savyn.BottomSheet" parent="Theme.Material3.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Savyn.BottomSheet</item>
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="textInputStyle">@style/Widget.Savyn.TextInputLayout</item>
     </style>
 </resources>

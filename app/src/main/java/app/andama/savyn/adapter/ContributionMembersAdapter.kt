@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import app.andama.savyn.R
 import app.andama.savyn.data.entity.Member
 import app.andama.savyn.databinding.ItemContributionMemberBinding
 
@@ -36,16 +37,23 @@ class ContributionMembersAdapter(
         fun bind(member: Member) {
             val hasPaid = member.id in paidMemberIds
             binding.textMemberName.text = member.name
+            binding.textAvatar.text = member.name.firstOrNull()?.uppercase() ?: "?"
 
             if (hasPaid) {
-                binding.iconStatus.setImageResource(android.R.drawable.checkbox_on_background)
                 binding.textContributionStatus.text = "Paid"
+                binding.textContributionStatus.setBackgroundResource(R.drawable.pill_paid)
+                binding.textContributionStatus.setTextColor(
+                    binding.root.context.getColor(R.color.pill_paid_text)
+                )
                 binding.btnRecordPayment.text = "Paid"
                 binding.btnRecordPayment.isEnabled = false
                 binding.btnRecordPayment.alpha = 0.5f
             } else {
-                binding.iconStatus.setImageResource(android.R.drawable.checkbox_off_background)
                 binding.textContributionStatus.text = "Not paid"
+                binding.textContributionStatus.setBackgroundResource(R.drawable.pill_unpaid)
+                binding.textContributionStatus.setTextColor(
+                    binding.root.context.getColor(R.color.pill_unpaid_text)
+                )
                 binding.btnRecordPayment.text = "Pay"
                 binding.btnRecordPayment.isEnabled = true
                 binding.btnRecordPayment.alpha = 1f

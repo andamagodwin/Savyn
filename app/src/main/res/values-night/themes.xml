@@ -17,9 +17,20 @@
         <item name="colorSurfaceVariant">@color/md_theme_dark_secondaryContainer</item>
         <item name="colorError">@color/md_theme_dark_error</item>
 
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="fontFamily">@font/poppins</item>
+
         <!-- Bold Headers and Card Styles -->
         <item name="textAppearanceTitleMedium">@style/TextAppearance.Savyn.BoldTitleMedium</item>
         <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Savyn.BoldHeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.Savyn.BoldHeadlineSmall</item>
         <item name="materialCardViewStyle">@style/Widget.Savyn.CardView</item>
+        <item name="textInputStyle">@style/Widget.Savyn.TextInputLayout</item>
+
+        <!-- Bold Toolbar Text -->
+        <item name="toolbarStyle">@style/Widget.Savyn.Toolbar</item>
+
+        <!-- Branded Button Styles -->
+        <item name="materialButtonStyle">@style/Widget.Savyn.Button</item>
     </style>
 </resources>

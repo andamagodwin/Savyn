@@ -39,7 +39,7 @@
         android:layout_marginTop="12dp"
         android:hint="@string/weekly_target_amount"
         style="@style/Widget.Savyn.TextInputLayout"
-        app:prefixText="$"
+        app:prefixText="UGX"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
         <com.google.android.material.textfield.TextInputEditText

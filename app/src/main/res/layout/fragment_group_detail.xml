@@ -12,85 +12,112 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="2dp">
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="24dp"
+        app:strokeWidth="0dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/text_group_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceHeadlineSmall"
-                tools:text="Village Savings" />
-
-            <TextView
-                android:id="@+id/text_group_description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textAppearance="?attr/textAppearanceBodyMedium"
-                android:textColor="?android:attr/textColorSecondary"
-                tools:text="Weekly savings for community" />
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-10dp"
+                android:layout_marginEnd="-15dp"
+                android:alpha="1.0"
+                android:scaleType="centerInside"
+                android:src="@drawable/savings_bro__2_" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/text_group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textStyle="bold"
+                    tools:text="Village Savings" />
+
+                <TextView
+                    android:id="@+id/text_group_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:alpha="0.8"
+                    tools:text="Weekly savings for community" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/text_member_count"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?attr/textAppearanceTitleLarge"
-                        android:textColor="?attr/colorPrimary"
-                        tools:text="5" />
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/text_member_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceTitleLarge"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textStyle="bold"
+                            tools:text="5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/members"
+                            android:textAppearance="?attr/textAppearanceLabelSmall"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:alpha="0.7"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/members"
-                        android:textAppearance="?attr/textAppearanceLabelSmall" />
-                </LinearLayout>
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/text_group_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceTitleLarge"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:textStyle="bold"
+                            tools:text="UGX 1,200,000" />
 
-                    <TextView
-                        android:id="@+id/text_group_total"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?attr/textAppearanceTitleLarge"
-                        android:textColor="?attr/colorPrimary"
-                        tools:text="$1,200" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/total_saved"
-                        android:textAppearance="?attr/textAppearanceLabelSmall" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_saved"
+                            android:textAppearance="?attr/textAppearanceLabelSmall"
+                            android:textColor="?attr/colorOnPrimary"
+                            android:alpha="0.7"
+                            android:textAllCaps="true" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Action Buttons -->
+    <!-- Action Buttons - Branded Pills -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -105,8 +132,13 @@
             android:layout_weight="1"
             android:layout_marginEnd="4dp"
             android:text="@string/contributions"
+            android:textSize="11sp"
+            android:paddingHorizontal="4dp"
+            app:cornerRadius="20dp"
             style="@style/Widget.Material3.Button.TonalButton"
-            app:icon="@drawable/money_linear_32px" />
+            app:icon="@drawable/money_linear_32px"
+            app:iconPadding="4dp"
+            app:iconSize="16dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_analytics"
@@ -115,8 +147,13 @@
             android:layout_weight="1"
             android:layout_marginHorizontal="4dp"
             android:text="@string/analytics"
+            android:textSize="11sp"
+            android:paddingHorizontal="4dp"
+            app:cornerRadius="20dp"
             style="@style/Widget.Material3.Button.TonalButton"
-            app:icon="@drawable/diagram_linear_32px" />
+            app:icon="@drawable/diagram_linear_32px"
+            app:iconPadding="4dp"
+            app:iconSize="16dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_goals"
@@ -125,8 +162,13 @@
             android:layout_weight="1"
             android:layout_marginStart="4dp"
             android:text="@string/goals"
+            android:textSize="11sp"
+            android:paddingHorizontal="4dp"
+            app:cornerRadius="20dp"
             style="@style/Widget.Material3.Button.TonalButton"
-            app:icon="@drawable/money_linear_32px" />
+            app:icon="@drawable/target_linear_32px"
+            app:iconPadding="4dp"
+            app:iconSize="16dp" />
     </LinearLayout>
 
     <!-- Members List -->
@@ -160,8 +202,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_add_member"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_margin="16dp"
         android:text="@string/add_member"
+        app:cornerRadius="16dp"
         app:icon="@drawable/add_linear_32px" />
 </LinearLayout>

@@ -25,7 +25,7 @@
         android:layout_marginTop="12dp"
         android:hint="@string/target_amount"
         style="@style/Widget.Savyn.TextInputLayout"
-        app:prefixText="$">
+        app:prefixText="UGX">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_target_amount"
@@ -38,8 +38,9 @@
         android:id="@+id/btn_set_deadline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:text="@string/set_deadline_optional"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        app:icon="@android:drawable/ic_menu_my_calendar" />
+        app:cornerRadius="20dp"
+        app:icon="@android:drawable/ic_menu_my_calendar"
+        style="@style/Widget.Material3.Button.OutlinedButton" />
 </LinearLayout>

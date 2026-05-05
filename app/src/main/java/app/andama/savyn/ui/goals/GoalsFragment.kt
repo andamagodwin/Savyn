@@ -13,6 +13,7 @@ import app.andama.savyn.SavynApplication
 import app.andama.savyn.adapter.GoalsAdapter
 import app.andama.savyn.databinding.FragmentGoalsBinding
 import app.andama.savyn.databinding.DialogAddGoalBinding
+import app.andama.savyn.util.CurrencyUtils
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -53,13 +54,32 @@ class GoalsFragment : Fragment() {
             adapter.submitList(goals)
             binding.textEmpty.visibility = if (goals.isEmpty()) View.VISIBLE else View.GONE
             binding.recyclerGoals.visibility = if (goals.isEmpty()) View.GONE else View.VISIBLE
+            binding.textGoalsCount.text = goals.size.toString()
+
+            val total = viewModel.groupTotal.value ?: 0.0
+            updateAvgProgress(goals, total)
         }
 
         viewModel.groupTotal.observe(viewLifecycleOwner) { total ->
             adapter.setGroupTotal(total)
+            binding.textGoalsSaved.text = CurrencyUtils.format(total)
+
+            val goals = viewModel.goals.value ?: emptyList()
+            updateAvgProgress(goals, total)
         }
 
         binding.fabAddGoal.setOnClickListener { showAddGoalDialog() }
+    }
+
+    private fun updateAvgProgress(goals: List<app.andama.savyn.data.entity.SavingsGoal>, total: Double) {
+        if (goals.isEmpty()) {
+            binding.textGoalsProgress.text = "0%"
+            return
+        }
+        val avgPercent = goals.map { goal ->
+            if (goal.targetAmount > 0) ((total / goal.targetAmount) * 100).coerceAtMost(100.0) else 0.0
+        }.average().toInt()
+        binding.textGoalsProgress.text = "$avgPercent%"
     }
 
     private fun showAddGoalDialog() {

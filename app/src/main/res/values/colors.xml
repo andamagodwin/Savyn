@@ -42,4 +42,11 @@
     <color name="chart_primary">#E35336</color>
     <color name="chart_secondary">#F4A460</color>
     <color name="chart_accent">#A0522D</color>
+
+    <color name="pill_paid_bg">#1A4CAF50</color>
+    <color name="pill_paid_text">#2E7D32</color>
+    <color name="pill_unpaid_bg">#1AE35336</color>
+    <color name="pill_unpaid_text">#E35336</color>
+    <color name="pill_progress_bg">#1AF4A460</color>
+    <color name="pill_progress_text">#A0522D</color>
 </resources>

@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?attr/textAppearanceTitleMedium"
+        android:textColor="?attr/colorPrimary"
         android:layout_marginBottom="16dp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -18,7 +19,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/amount"
         style="@style/Widget.Savyn.TextInputLayout"
-        app:prefixText="$">
+        app:prefixText="UGX">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_amount"

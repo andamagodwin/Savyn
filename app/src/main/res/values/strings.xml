@@ -56,6 +56,8 @@
     <string name="set_deadline_optional">Set Deadline (optional)</string>
     <string name="select_deadline">Select Deadline</string>
     <string name="no_goals_yet">No savings goals yet.\nTap + to set a goal.</string>
+    <string name="active_goals">Active Goals</string>
+    <string name="avg_progress">Avg Progress</string>
 
     <!-- Common -->
     <string name="create">Create</string>

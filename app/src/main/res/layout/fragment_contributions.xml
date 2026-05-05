@@ -7,20 +7,22 @@
     android:orientation="vertical"
     tools:context=".ui.contributions.ContributionsFragment">
 
-    <!-- Week Selector -->
+    <!-- Week Selector - Branded Card -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="2dp">
+        app:cardBackgroundColor="?attr/colorPrimary"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="20dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_prev_week"
@@ -32,6 +34,7 @@
                 app:icon="@android:drawable/ic_media_previous"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnPrimary"
                 style="@style/Widget.Material3.Button.IconButton" />
 
             <LinearLayout
@@ -45,16 +48,20 @@
                     android:id="@+id/text_week_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?attr/textAppearanceTitleLarge"
+                    android:textAppearance="?attr/textAppearanceHeadlineSmall"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textStyle="bold"
                     tools:text="Week 5" />
 
                 <TextView
                     android:id="@+id/text_week_total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?attr/textAppearanceLabelMedium"
-                    android:textColor="?attr/colorPrimary"
-                    tools:text="Total: $250" />
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceLabelLarge"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:alpha="0.85"
+                    tools:text="Total: UGX 250,000" />
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
@@ -67,6 +74,7 @@
                 app:icon="@android:drawable/ic_media_next"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp"
+                app:iconTint="?attr/colorOnPrimary"
                 style="@style/Widget.Material3.Button.IconButton" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -75,6 +83,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/member_contributions"
         android:textAppearance="?attr/textAppearanceTitleMedium" />
 
